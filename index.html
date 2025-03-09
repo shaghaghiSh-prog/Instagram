@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Instagram</title>
+    <link rel="shortcut icon" href="./assets/images/download.png" />
+
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+   <link rel="stylesheet" href="./assets/css/style.css">
+  </head>
+  <body>
+    <div class="loader" id="loader"></div>
+    <header>
+      <div class="header-content">
+        <img
+            src="./assets/images/download.png"       
+            alt="Instagram"
+          class="instagram-logo"
+        />
+        <div>
+          <i
+            class="fas fa-home"
+            style="font-size: 24px; margin-right: 16px"
+          ></i>
+          <i
+            class="far fa-paper-plane"
+            style="font-size: 24px; margin-right: 16px"
+          ></i>
+          <i
+            class="far fa-compass"
+            style="font-size: 24px; margin-right: 16px"
+          ></i>
+          <i class="far fa-heart" style="font-size: 24px"></i>
+        </div>
+      </div>
+    </header>
+
+    <div class="container">
+      <div class="profile-header">
+        <img
+          id="profile-picture"
+          alt="Profile Picture"
+          class="profile-picture"
+        />
+        <div class="profile-info">
+          <div class="profile-actions">
+            <h2 id="username"></h2>
+          </div>
+          <div class="profile-stats">
+            <div class="profile-stat">
+              <strong id="posts-count"></strong> posts
+            </div>
+            <div class="profile-stat">
+              <strong id="followers-count"></strong> followers
+            </div>
+            <div class="profile-stat">
+              <strong id="following-count"></strong> following
+            </div>
+          </div>
+          <div class="profile-bio">
+            <strong id="full-name"></strong>
+            <p id="bio"></p>
+            <a id="website" target="_blank"></a>
+          </div>
+        </div>
+      </div>
+
+      <section id="highlights" class="highlights"></section>
+
+      <section id="posts" class="posts"></section>
+    </div>
+
+    <div id="modal" class="modal">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <div class="modal-content">
+        <img class="modal-image" id="modalImg" />
+        <div class="modal-details">
+          <div class="modal-header">
+            <img id="modalProfilePic" class="modal-profile-pic" />
+            <span id="modalUsername" class="modal-username"></span>
+          </div>
+          <div class="modal-actions">
+            <button class="action-button"><i class="far fa-heart"></i></button>
+            <button class="action-button">
+              <i class="far fa-comment"></i>
+            </button>
+            <button class="action-button">
+              <i class="far fa-paper-plane"></i>
+            </button>
+          </div>
+          <div class="modal-likes" id="modalLikes"></div>
+          <div class="modal-caption" id="modalCaption"></div>
+          <div class="modal-comments" id="modalComments"></div>
+        </div>
+      </div>
+    </div>
+
+    <div id="highlightModal" class="highlight-modal">
+      <span class="close" onclick="closeHighlightModal()">&times;</span>
+      <div class="highlight-content">
+        <img id="highlightImage" class="highlight-image-large" />
+      </div>
+    </div>
+
+    
+  </body>
+  <script src="./assets/js/script.js"></script>
+</html>
